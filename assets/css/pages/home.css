@@ -1,0 +1,23 @@
+#main {
+  padding: 0em 0 4em 0;
+}
+
+@media screen and (max-width: var(--bp-sm)) {
+  #main {
+    padding: 0em 0 4em 0;
+  }
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 2.5em;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}

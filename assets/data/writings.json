@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "How can we care with data?",
+    "description": "An interactive timeline highlighting scientific and technological contributions throughout Islamic history.",
+    "tags": ["thoughts"],
+    "link": "https://kawan.kontinentalist.com/applying-print-principles-to-data-visualization-design/",
+    "year": "2026",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "back to basics: learning from my roots",
+    "description": "A collection of editorial and commercial illustrations.",
+    "tags": ["thoughts"],
+    "link": "https://kawan.kontinentalist.com/applying-print-principles-to-data-visualization-design/",
+     "year": "2025",
+      "featured": true
+  }
+]

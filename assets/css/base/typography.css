@@ -1,0 +1,313 @@
+/* ======================================================
+   TYPOGRAPHY
+   ====================================================== */
+
+/* ---------------------------------------
+   Base
+---------------------------------------- */
+
+body,
+input,
+select,
+textarea {
+    color: var(--text-color);
+    background: var(--background-color);
+
+    font-family: var(--font-primary);
+    font-size: var(--step-0);
+    font-weight: var(--font-primary-weight);
+
+    line-height: 1.7;
+    letter-spacing: 0.005em;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------
+   Links
+---------------------------------------- */
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition:
+        color .25s ease,
+        opacity .25s ease;
+}
+
+a:hover {
+    color: #f2849e;
+}
+
+/* ---------------------------------------
+   Paragraphs
+---------------------------------------- */
+
+p {
+    font-size: var(--step-0);
+    max-width: var(--measure);
+    margin-bottom: var(--space-l);
+    line-height: 1.6;
+    letter-spacing: 0.005em;
+
+}
+
+/* ---------------------------------------
+   Headings
+---------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: inherit;
+    font-weight: var(--font-primary-weight);
+    line-height: 1.15;
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: var(--step-4);
+}
+
+h2 {
+    font-size: var(--step-3);
+}
+
+h3 {
+    font-size: var(--step-2);
+   
+}
+
+h4 {
+    font-size: var(--step-1);
+}
+
+h5 {
+    font-size: var(--step-0);
+}
+
+h6 {
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+/* ---------------------------------------
+   Hero Heading
+---------------------------------------- */
+
+h1.hero {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-secondary);
+    font-weight: var(--font-secondary-weight);
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+}
+
+/* ---------------------------------------
+   Heading Links
+---------------------------------------- */
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit;
+}
+
+/* ---------------------------------------
+   Strong / Emphasis
+---------------------------------------- */
+
+strong,
+b {
+    font-weight: var(--font-primary-bold);
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+/* ---------------------------------------
+   Signature / Annotation
+---------------------------------------- */
+
+.signature {
+    font-family: var(--font-accent);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    line-height: 1em;
+}
+
+/* ---------------------------------------
+   Metadata
+---------------------------------------- */
+
+.meta,
+.caption,
+.date,
+.tag {
+    font-family: var(--font-secondary);
+    font-size: var(--step--1);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    opacity: .7;
+}
+
+/* ---------------------------------------
+   Lists
+---------------------------------------- */
+
+ul,
+ol {
+    max-width: var(--measure);
+    margin-bottom: var(--space-l);
+    line-height: 1.8;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul {
+    list-style: disc;
+}
+
+/* ---------------------------------------
+   Quotes
+---------------------------------------- */
+
+blockquote {
+    max-width: 55ch;
+
+    margin: var(--space-2xl) 0;
+
+    padding-left: var(--space-l);
+
+    border-left: 2px solid currentColor;
+
+    font-size: var(--step-1);
+
+    line-height: 1.6;
+
+    opacity: .85;
+}
+
+/* ---------------------------------------
+   Code
+---------------------------------------- */
+
+code {
+    font-family: var(--font-secondary);
+
+    font-size: .9em;
+
+    background: rgb(0 0 0 / .05);
+
+    border-radius: 4px;
+
+    padding: .2em .45em;
+}
+
+pre {
+    overflow-x: auto;
+
+    margin: var(--space-xl) 0;
+}
+
+pre code {
+    display: block;
+
+    padding: var(--space-l);
+
+    line-height: 1.7;
+}
+
+/* ---------------------------------------
+   Rules
+---------------------------------------- */
+
+hr {
+    border: 0;
+
+    border-top: 1px solid rgb(0 0 0 / .15);
+
+    margin: var(--space-3xl) 0;
+}
+
+/* ---------------------------------------
+   Scribble Effect
+---------------------------------------- */
+
+.text-effect {
+    position: relative;
+
+    display: inline-block;
+}
+
+.text-effect::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: .08em;
+    height: 2px;
+    background: currentColor;
+    border-radius: 999px;
+    filter: url(#text-effect-scribble);
+    transform-origin: left;
+    animation: text-effect-draw .8s cubic-bezier(.5,0,.5,1) both;
+}
+
+.text-effect:hover::after {
+    animation-name: text-effect-draw-r;
+}
+
+@keyframes text-effect-draw {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes text-effect-draw-r {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* ---------------------------------------
+   Responsive
+---------------------------------------- */
+
+@media (max-width: 736px) {
+
+    h1.hero {
+        width: 90%;
+    }
+
+    h2 {
+        margin-top: var(--space-2xl);
+    }
+
+    h3 {
+        margin-top: var(--space-xl);
+    }
+
+}

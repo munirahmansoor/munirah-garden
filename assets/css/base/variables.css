@@ -1,0 +1,64 @@
+:root {
+  --background-color: light-dark(white, rgb(31, 31, 31));
+  --text-color: light-dark(black, white);
+  --form-bg: light-dark(#f0f0f0, #1e1e1e);
+  --form-color: light-dark(black, white);
+  --form-border: light-dark(#ccc, #555);
+  --button-bg: light-dark(#ececec, #333);
+  --button-text: light-dark(black, white);
+  --note-bg: light-dark(#e8db68, rgb(208, 171, 6));
+  --note-bg-2: light-dark(#e79a9a, rgb(206, 130, 130));
+  --note-text: light-dark(black, rgb(29, 29, 29));
+
+  --font-primary: 'akzidenz-grotesk-next-pro', sans-serif;
+  --font-primary-weight: 400;
+  --font-primary-bold: 800;
+  --font-primary-italic: 'recursive-mono-casual-static', sans-serif;
+  --font-secondary: 'recursive-mono-casual-static', sans-serif;
+  --font-secondary-weight: 200;
+  --font-accent: 'reenie-beanie', sans-serif;
+
+
+/* ---------------------------------------
+   Fluid Type Scale
+---------------------------------------- */
+
+--step--1: clamp(0.9rem, 0.88rem + 0.08vw, 0.95rem);
+/* Body */
+--step-0: clamp(1.2rem, 1rem + 0.25vw, 1.25rem);
+/* Small heading */
+--step-1: clamp(1.2rem, 1.15rem + 0.2vw, 1.35rem);
+/* H3 */
+--step-2: clamp(1.45rem, 1.35rem + 0.35vw, 1.7rem);
+/* H2 */
+--step-3: clamp(1.8rem, 1.65rem + 0.5vw, 2.2rem);
+/* H1 */
+--step-4: clamp(2.4rem, 2.2rem + 0.8vw, 3rem);
+
+
+  --space-2xs: .25rem;
+  --space-xs: .5rem;
+  --space-s: .75rem;
+  --space-m: 1rem;
+  --space-l: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 5rem;
+
+  --measure: 68ch;
+
+  --bp-xxs: 360px;
+  --bp-xs: 480px;
+  --bp-sm: 736px;
+  --bp-md: 980px;
+  --bp-lg: 1280px;
+  --bp-xl: 1680px;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}

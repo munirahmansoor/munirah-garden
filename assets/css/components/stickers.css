@@ -1,0 +1,22 @@
+.hover-sticker {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.sticker {
+  font-family: "reenie-beanie", sans-serif;
+  font-size: 28px;
+  position: absolute;
+  top: -16px;
+  right: -18px;
+  opacity: 0;
+  transform: rotate(-15deg) scale(0);
+  transition: 0.3s cubic-bezier(.22,1,.36,1);
+  pointer-events: none;
+}
+
+.hover-sticker:hover .sticker {
+  opacity: 1;
+  transform: rotate(10deg) scale(1);
+}

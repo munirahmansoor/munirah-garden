@@ -1,0 +1,31 @@
+#theme-toggle {
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+.sun {
+  display: block;
+}
+
+.moon {
+  display: none;
+}
+
+html[data-theme="dark"] .sun {
+  display: none;
+}
+
+html[data-theme="dark"] .moon {
+  display: block;
+}

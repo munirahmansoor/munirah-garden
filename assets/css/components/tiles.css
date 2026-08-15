@@ -1,0 +1,115 @@
+.tiles {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  margin: -2.5em 0 0 -2.5em;
+  padding-bottom: 4em;
+}
+
+.tiles article {
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  width: calc(50% - 2.5em);
+ margin: 2.5em 0 0 2.5em;
+}
+
+.tiles article > .image {
+  -moz-transition: -moz-transform 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  -ms-transition: -ms-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tiles article > .image img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  column-gap: 20px;
+}
+
+* + .tiles {
+  margin-top: 0.5em;
+}
+
+body.is-preload .tiles article {
+  -moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+body.is-touch .tiles article .content {
+  max-height: 15em;
+  opacity: 1;
+}
+
+@media screen and (max-width: var(--bp-lg)) {
+  .tiles {
+    margin: -1.25em 0 0 -1.25em;
+  }
+
+  .tiles article {
+    width: calc(50% - 1.25em);
+    margin: 1.25em 0 0 1.25em;
+  }
+}
+
+@media screen and (max-width: var(--bp-md)) {
+  .tiles {
+    margin: -2.5em 0 0 -2.5em;
+  }
+
+  .tiles article {
+    width: calc(50% - 2.5em);
+    margin: 2.5em 0 0 2.5em;
+  }
+}
+
+@media screen and (max-width: var(--bp-sm)) {
+  .tiles {
+    margin: -1.25em 0 0 -1.25em;
+  }
+
+  .tiles article {
+    width: calc(50% - 1.25em);
+    margin: 1.25em 0 0 1.25em;
+  }
+
+  .tiles article:hover > .image {
+    -moz-transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+@media screen and (max-width: var(--bp-xs)) {
+  .tiles {
+    margin: 0;
+  }
+
+  .tiles article {
+    width: 100%;
+    margin: 1.25em 0 0 0;
+  }
+}

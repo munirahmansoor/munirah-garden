@@ -1,0 +1,29 @@
+#wrapper {
+  -moz-transition: opacity 0.45s ease;
+  -webkit-transition: opacity 0.45s ease;
+  -ms-transition: opacity 0.45s ease;
+  transition: opacity 0.45s ease;
+  opacity: 1;
+  margin: 2em;
+}
+
+#wrapper > * > .inner {
+  position: relative;
+  width: calc(100% - (var(--space-xl) * 2));
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.25em;
+}
+
+#wrapper > * > .outer {
+  position: relative;
+  width: calc(100% - (var(--space-xl) * 2));
+  margin: 0 auto;
+  padding: 0 1.25em;
+}
+
+@media screen and (max-width: var(--bp-sm)) {
+  #wrapper > * > .inner {
+    padding: 0 1.25em;
+  }
+}

@@ -1,0 +1,72 @@
+.notes-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  background: var(--background-color);
+  left: 0;
+}
+
+.photo {
+  position: absolute;
+}
+
+.note {
+  position: absolute;
+  width: 220px;
+  min-height: 120px;
+  padding: 1rem;
+  background: var(--note-bg);
+  color: var(--note-text);
+  box-shadow: 0 8px 18px rgba(0,0,0,.12);
+  cursor: grab;
+  user-select: none;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.note:active {
+  cursor: grabbing;
+  box-shadow: 0 16px 30px rgba(0,0,0,.2);
+  z-index: 999;
+}
+
+.note2 {
+  position: absolute;
+  width: 220px;
+  min-height: 120px;
+  padding: 1rem;
+  background: var(--note-bg-2);
+  color: var(--note-text);
+  box-shadow: 0 8px 18px rgba(0,0,0,.12);
+  cursor: grab;
+  user-select: none;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.note2:active {
+  cursor: grabbing;
+  box-shadow: 0 16px 30px rgba(0,0,0,.2);
+  z-index: 999;
+}
+
+.photo {
+  position: absolute;
+  width: 180px;
+  cursor: grab;
+  user-select: none;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.draggable {
+  --x: 0px;
+  --y: 0px;
+  --rotation: 0deg;
+  transform: rotate(var(--rotation));
+}

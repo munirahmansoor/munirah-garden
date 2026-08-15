@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Language of Nusantara Apothecary",
+    "slug": "language-of-nusantara-apothecary",
+    "description": "An archive documenting the visual language of traditional medicinal packaging across Southeast Asia.",
+    "tags": ["archive" , "research"],
+    "image": "assets/images/pic01.jpg",
+    "content": "assets/content/language-of-nusantara-apothecary.md",
+    "showHero": false,
+    "featured": true
+    
+  },
+  {
+    "id": 2,
+    "title": "Islamic Tech & Innovation Timeline",
+    "slug": "islamic-tech",
+    "description": "An interactive timeline highlighting scientific and technological contributions throughout Islamic history.",
+    "tags": ["research" , "timeline"],
+    "content": "assets/content/islamic-tech-timeline.md",
+    "image": "assets/images/pic01.jpg",
+    "showHero": false,
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Commissioned Visuals",
+    "slug": "commissioned-visuals",
+    "description": "A collection of editorial and commercial illustrations.",
+    "tags": ["illustration"],
+    "image": "images/pic01.jpg",
+    "showHero": false,
+    "featured": false
+  }
+]
